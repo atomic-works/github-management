@@ -24,3 +24,12 @@ body:
       options:
         - label: 'I used the `github-template` template repository, and copied all branches.'
         - label: 'I unchecked `General` => `Preserve this repository`.'
+        - label: 'I unchecked `General` => `Allow rebase merging`.'
+        - label: 'I checked `General` => `Always suggest updating pull request branches`.'
+        - label: 'I checked `General` => `Allow auto-merge`.'
+        - label: 'I checked `General` => `Automatically delete head branches`.'
+        - label: 'I set `General` => `Limit how many branches and tags can be updated in a single push` to 2.'
+        - label: 'I created the development team `development-repository-name` with the parent team `development`.
+        - label: 'I assigned the aforementioned team to this repository.'
+        - label: 'I created variables under `Secrets & Variables` => `Actions` => `Variables` for `UBUNTU_VERSION` and `BUMP_TYPE`.'
+        - label: 'I created branch protection rules for `development`, `test`, `production`, and `**/**`.
