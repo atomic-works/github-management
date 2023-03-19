@@ -10,17 +10,3 @@ body:
       required: true
     attributes:
       label: 'Repository Purpose'
-  - type: checkboxes
-    attributes:
-      label: 'Project'
-      description: 'Please assign this issue to a project.'
-      options:
-        - label: 'I have assigned this issue to a project.'
-          required: true
-- type: checkboxes
-    attributes:
-      label: 'Checklist'
-      description: 'Steps to do when creating a new repository before it is ready for work.'
-      options:
-        - label: 'I used the `github-template` template repository, and copied all branches.'
-        - label: 'I unchecked `General` => `Preserve this repository`.'
