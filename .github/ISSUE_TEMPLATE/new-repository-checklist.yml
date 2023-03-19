@@ -33,3 +33,24 @@ body:
         - label: 'I assigned the aforementioned team to this repository.'
         - label: 'I created variables under `Secrets & Variables` => `Actions` => `Variables` for `UBUNTU_VERSION` and `BUMP_TYPE`.'
         - label: 'I created branch protection rules for `development`, `test`, `production`, and `**/**`.'
+  - type: checkboxes
+    attributes:
+      label: 'Protected Deployment Branches'
+      description: 'Settings to toggle for protected branch rules on `development`, `test`, and `production`.'
+      options:
+        - label: '`Require a pull request before merging`.'
+        - label: '`Require status checks to pass before merging`.'
+        - label: '`Require branches to be up to date before merging`.'
+        - label: '`Require signed commits`.'
+        - label: '`Do not allow bypassing the above settings`.'
+  - type: checkboxes
+    attributes:
+      label: 'Protected Feature Branches'
+      description: 'Settings to toggle for the `**/**` rule that covers all feature branches.'
+      options:
+        - label: '`Require a pull request before merging`.'
+        - label: '`Require status checks to pass before merging`.'
+        - label: '`Require branches to be up to date before merging`.'
+        - label: '`Require signed commits`.'
+        - label: '`Do not allow bypassing the above settings`.'
+        - label: '`Allow deletions`.'
