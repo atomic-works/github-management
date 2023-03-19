@@ -32,4 +32,4 @@ body:
         - label: 'I created the development team `development-repository-name` with the parent team `development`.'
         - label: 'I assigned the aforementioned team to this repository.'
         - label: 'I created variables under `Secrets & Variables` => `Actions` => `Variables` for `UBUNTU_VERSION` and `BUMP_TYPE`.'
-        - label: 'I created branch protection rules for `development`, `test`, `production`, and `**/**`.
+        - label: 'I created branch protection rules for `development`, `test`, `production`, and `**/**`.'
