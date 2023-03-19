@@ -17,9 +17,10 @@ body:
       options:
         - label: 'I have assigned this issue to a project.'
           required: true
-- type: checkboxes
+  - type: checkboxes
     attributes:
       label: 'Checklist'
       description: 'Steps to do when creating a new repository before it is ready for work.'
       options:
         - label: 'I used the `github-template` template repository, and copied all branches.'
+        - label: 'I unchecked `General` => `Preserve this repository`.'
