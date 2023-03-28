@@ -31,7 +31,7 @@ body:
         - label: 'I created the development team `development-repository-name` with the parent team `development`.'
         - label: 'I assigned the aforementioned team to this repository.'
         - label: 'I created variables under `Secrets & Variables` => `Actions` => `Variables` for `UBUNTU_VERSION` and `BUMP_TYPE`.'
-        - label: 'I created an initial tag with the command `git tag --annotate 0.0.0 --sign --message "Initial tag."` and pushed it to GitHub with `push --tags`..
+        - label: 'I created an initial tag with the command `git tag --annotate 0.0.0 --sign --message "Initial tag."` and pushed it to GitHub with `push --tags`.'
         - label: 'I created branch protection rules for `development`, `test`, `production`, and `**/**`.'
   - type: checkboxes
     attributes:
