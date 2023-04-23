@@ -53,8 +53,8 @@ body:
         - label: '`Require signed commits`.'
         - label: '`Do not allow bypassing the above settings`.'
         - label: '`Allow deletions`.'
- - type: checkboxes
-   attributes:
-     label: 'Settings to toggle for the `**/**` rule that covers all feature branches.'
-     options:
-       - label: '`Lock branch`.'
+  - type: checkboxes
+    attributes:
+      label: 'Settings to toggle for the `**/**` rule that covers all feature branches.'
+      options:
+        - label: '`Lock branch`.'
