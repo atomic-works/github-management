@@ -32,7 +32,7 @@ body:
         - label: 'I assigned the aforementioned team to this repository.'
         - label: 'I created variables under `Secrets & Variables` => `Actions` => `Variables` for `UBUNTU_VERSION` and `BUMP_TYPE`.'
         - label: 'I created an initial tag with the command `git tag --annotate 0.0.0 --sign --message "Initial tag."` and pushed it to GitHub with `git push --tags`.'
-        - label: 'I created branch protection rules for `development`, `test`, `production`, and `**/**`.'
+        - label: 'I created branch protection rules for `development`, `test`, `production`, `issue-[0-9]+`, and `**/**`.'
   - type: checkboxes
     attributes:
       label: 'Settings to toggle for protected branch rules on `development`, `test`, and `production`.'
@@ -40,11 +40,12 @@ body:
         - label: '`Require a pull request before merging`.'
         - label: '`Require status checks to pass before merging`.'
         - label: '`Require branches to be up to date before merging`.'
+        - lable: '`require conversation resolution before merging`.'
         - label: '`Require signed commits`.'
         - label: '`Do not allow bypassing the above settings`.'
   - type: checkboxes
     attributes:
-      label: 'Settings to toggle for the `**/**` rule that covers all feature branches.'
+      label: 'Settings to toggle for the `issue-[0-9]+` rule that covers all feature branches.'
       options:
         - label: '`Require a pull request before merging`.'
         - label: '`Require status checks to pass before merging`.'
@@ -52,3 +53,8 @@ body:
         - label: '`Require signed commits`.'
         - label: '`Do not allow bypassing the above settings`.'
         - label: '`Allow deletions`.'
+  - type: checkboxes
+    attributes:
+      label: 'Settings to toggle for the `**/**` rule that covers all feature branches.'
+      options:
+        - label: '`Lock branch`.'
