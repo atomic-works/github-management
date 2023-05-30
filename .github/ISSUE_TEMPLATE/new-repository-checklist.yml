@@ -23,8 +23,8 @@ body:
       options:
         - label: 'I used the `github-template` template repository, and copied all branches.'
         - label: 'I unchecked `General` => `Preserve this repository`.'
-        - label: 'I checked `General` => `Allow merge commits` => default to pull request title`.'
-        - label: 'I checked `General` => `Allow squash merging` => default to pull request title`.'
+        - label: 'I checked `General` => `Allow merge commits` => `default to pull request title`.'
+        - label: 'I checked `General` => `Allow squash merging` => `default to pull request title`.'
         - label: 'I unchecked `General` => `Allow rebase merging`.'
         - label: 'I checked `General` => `Always suggest updating pull request branches`.'
         - label: 'I checked `General` => `Allow auto-merge`.'
