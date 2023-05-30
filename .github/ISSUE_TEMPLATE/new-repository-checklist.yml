@@ -23,6 +23,8 @@ body:
       options:
         - label: 'I used the `github-template` template repository, and copied all branches.'
         - label: 'I unchecked `General` => `Preserve this repository`.'
+        - label: 'I checked `General` => `Allow merge commits` => default to pull request title`.'
+        - label: 'I checked `General` => `Allow squash merging` => default to pull request title`.'
         - label: 'I unchecked `General` => `Allow rebase merging`.'
         - label: 'I checked `General` => `Always suggest updating pull request branches`.'
         - label: 'I checked `General` => `Allow auto-merge`.'
@@ -35,26 +37,43 @@ body:
         - label: 'I created branch protection rules for `development`, `test`, `production`, `issue-[0-9]+`, and `**/**`.'
   - type: checkboxes
     attributes:
-      label: 'Settings to toggle for protected branch rules on `development`, `test`, and `production`.'
+      label: 'Ruleset `Disabled Branch Names`'
       options:
-        - label: '`Require a pull request before merging`.'
-        - label: '`Require status checks to pass before merging`.'
-        - label: '`Require branches to be up to date before merging`.'
-        - label: '`require conversation resolution before merging`.'
-        - label: '`Require signed commits`.'
-        - label: '`Do not allow bypassing the above settings`.'
+        - label: 'Exclude target `development`.'
+        - label: 'Exclude target `test`.'
+        - label: 'Exclude target `production`.'
+        - label: 'Exclude target `issue-**/**`.'
+        - label: 'Include target option `All branches`.'
+        - label: 'Checkmark `Restrict creations`.'
+        - label: 'Checkmark `Block force pushes`.'
   - type: checkboxes
     attributes:
-      label: 'Settings to toggle for the `issue-[0-9]+` rule that covers all feature branches.'
+      label: 'Ruleset `Environment Branches`'
       options:
-        - label: '`Require a pull request before merging`.'
-        - label: '`Require status checks to pass before merging`.'
-        - label: '`Require branches to be up to date before merging`.'
-        - label: '`Require signed commits`.'
-        - label: '`Do not allow bypassing the above settings`.'
-        - label: '`Allow deletions`.'
+        - label: 'Include target `development`.'
+        - label: 'Include target `test`.'
+        - label: 'Include target `production`.'
+        - label: 'Checkmark `Restrict deletions`.'
+        - label: 'Checkmark `Require signed commits`.'
+        - label: 'Checkmark `Require a pull request before merging`.'
+        - label: 'Checkmark `Require approval of the most reviewable push`.'
+        - label: 'Checkmark `Require conversation resolution before merging`.'
+        - label: 'Checkmark `Block force pushes`.'
   - type: checkboxes
     attributes:
-      label: 'Settings to toggle for the `**/**` rule that covers all feature branches.'
+      label: 'Ruleset `Feature Branches`'
       options:
-        - label: '`Lock branch`.'
+        - label: 'Exclude target `development`.'
+        - label: 'Exclude target `test`.'
+        - label: 'Exclude target `production`.'
+        - label: 'Include target `issue-**/**`.'
+        - label: 'Checkmark `Require signed commits`.'
+        - label: 'Checkmark `Block force pushes`.'
+  - type: checkboxes
+    attributes:
+      label: 'Ruleset `Disabled Tag Names`'
+      options:
+        - label: 'Exclude target `[0-9]+.[0-9]+[0-9]+`.'
+        - label: 'Include target option `All tags`.'
+        - label: 'Checkmark `Restrict creations`.'
+        - label: 'Checkmark `Block force pushes`.'
