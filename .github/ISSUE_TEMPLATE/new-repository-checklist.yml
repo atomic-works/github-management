@@ -42,7 +42,11 @@ body:
         - label: 'Exclude target `development`.'
         - label: 'Exclude target `test`.'
         - label: 'Exclude target `production`.'
-        - label: 'Exclude target `issue-**/**`.'
+        - label: 'Exclude target `issue-[0-9]-**`.'
+        - label: 'Exclude target `issue-[0-9][0-9]-**`.'
+        - label: 'Exclude target `issue-[0-9][0-9][0-9]-**`.'
+        - label: 'Exclude target `issue-[0-9][0-9][0-9][0-9]-**`.'
+        - label: 'Exclude target `issue-[0-9][0-9][0-9][0-9][0-9]-**`.'
         - label: 'Include target option `All branches`.'
         - label: 'Checkmark `Restrict creations`.'
         - label: 'Checkmark `Block force pushes`.'
@@ -63,17 +67,10 @@ body:
     attributes:
       label: 'Ruleset `Feature Branches`'
       options:
-        - label: 'Exclude target `development`.'
-        - label: 'Exclude target `test`.'
-        - label: 'Exclude target `production`.'
-        - label: 'Include target `issue-**/**`.'
+        - label: 'Include target `issue-[0-9]-**`.'
+        - label: 'Include target `issue-[0-9][0-9]-**`.'
+        - label: 'Include target `issue-[0-9][0-9][0-9]-**`.'
+        - label: 'Include target `issue-[0-9][0-9][0-9][0-9]-**`.'
+        - label: 'Include target `issue-[0-9][0-9][0-9][0-9][0-9]-**`.'
         - label: 'Checkmark `Require signed commits`.'
-        - label: 'Checkmark `Block force pushes`.'
-  - type: checkboxes
-    attributes:
-      label: 'Ruleset `Disabled Tag Names`'
-      options:
-        - label: 'Exclude target `[0-9]+.[0-9]+[0-9]+`.'
-        - label: 'Include target option `All tags`.'
-        - label: 'Checkmark `Restrict creations`.'
         - label: 'Checkmark `Block force pushes`.'
