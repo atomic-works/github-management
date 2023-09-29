@@ -23,7 +23,6 @@ body:
       options:
         - label: 'I used the `github-template` template repository, and copied all branches.'
         - label: 'I unchecked `General` => `Preserve this repository`.'
-        - label: 'I checked `General` => `Allow merge commits` => `default to pull request title`.'
         - label: 'I checked `General` => `Allow squash merging` => `default to pull request title`.'
         - label: 'I unchecked `General` => `Allow rebase merging`.'
         - label: 'I checked `General` => `Always suggest updating pull request branches`.'
@@ -34,10 +33,10 @@ body:
         - label: 'I assigned the aforementioned team to this repository.'
         - label: 'I created variables under `Secrets & Variables` => `Actions` => `Variables` for `UBUNTU_VERSION` and `BUMP_TYPE`.'
         - label: 'I created an initial tag with the command `git tag --annotate 0.0.0 --sign --message "Initial tag."` and pushed it to GitHub with `git push --tags`.'
-        - label: 'I created branch protection rules for `development`, `test`, `production`, `issue-[0-9]+`, and `**/**`.'
+        - label: 'I created the following branch/tag rulesets.'
   - type: checkboxes
     attributes:
-      label: 'Ruleset `Disabled Branch Names`'
+      label: 'Branch Ruleset `Disabled Branch Names`'
       options:
         - label: 'Exclude target `development`.'
         - label: 'Exclude target `test`.'
@@ -52,12 +51,13 @@ body:
         - label: 'Checkmark `Block force pushes`.'
   - type: checkboxes
     attributes:
-      label: 'Ruleset `Environment Branches`'
+      label: 'Branch Ruleset `Environment Branches`'
       options:
         - label: 'Include target `development`.'
         - label: 'Include target `test`.'
         - label: 'Include target `production`.'
         - label: 'Checkmark `Restrict deletions`.'
+        - label: 'Checkmark `Require linear history`.'
         - label: 'Checkmark `Require signed commits`.'
         - label: 'Checkmark `Require a pull request before merging`.'
         - label: 'Checkmark `Require approval of the most reviewable push`.'
@@ -65,12 +65,52 @@ body:
         - label: 'Checkmark `Block force pushes`.'
   - type: checkboxes
     attributes:
-      label: 'Ruleset `Feature Branches`'
+      label: 'Branch Ruleset `Feature Branches`'
       options:
         - label: 'Include target `issue-[0-9]-**`.'
         - label: 'Include target `issue-[0-9][0-9]-**`.'
         - label: 'Include target `issue-[0-9][0-9][0-9]-**`.'
         - label: 'Include target `issue-[0-9][0-9][0-9][0-9]-**`.'
         - label: 'Include target `issue-[0-9][0-9][0-9][0-9][0-9]-**`.'
+        - label: 'Checkmark `Require signed commits`.'
+        - label: 'Checkmark `Block force pushes`.'
+  - type: checkboxes
+    attributes:
+      label: 'Ruleset `Disabled Tag Names`'
+      options:
+        - label: 'Exclude target `[0-9].[0-9].[0-9]`.'
+        - label: 'Exclude target `[0-9].[0-9].[0-9][0-9]`.'
+        - label: 'Exclude target `[0-9].[0-9][0-9].[0-9]`.'
+        - label: 'Exclude target `[0-9][0-9].[0-9].[0-9]`.'
+        - label: 'Exclude target `[0-9].[0-9][0-9].[0-9][0-9]`.'
+        - label: 'Exclude target `[0-9][0-9].[0-9].[0-9][0-9]`.'
+        - label: 'Exclude target `[0-9][0-9].[0-9][0-9].[0-9]`.'
+        - label: 'Exclude target `[0-9][0-9].[0-9][0-9].[0-9][0-9]`.'
+        - label: 'Exclude target `[0-9].[0-9].[0-9][0-9][0-9]`.'
+        - label: 'Exclude target `[0-9].[0-9][0-9].[0-9][0-9][0-9]`.'
+        - label: 'Exclude target `[0-9][0-9].[0-9].[0-9][0-9][0-9]`.'
+        - label: 'Exclude target `[0-9][0-9].[0-9][0-9].[0-9][0-9][0-9]`.'
+        - label: 'Include target option `All branches`.'
+        - label: 'Checkmark `Restrict creations`.'
+        - label: 'Checkmark `Block force pushes`.'
+  - type: checkboxes
+    attributes:
+      label: 'Ruleset `Semantic Versioning Tags`'
+      options:
+        - label: 'Include target `[0-9].[0-9].[0-9]`.'
+        - label: 'Include target `[0-9].[0-9].[0-9][0-9]`.'
+        - label: 'Include target `[0-9].[0-9][0-9].[0-9]`.'
+        - label: 'Include target `[0-9][0-9].[0-9].[0-9]`.'
+        - label: 'Include target `[0-9].[0-9][0-9].[0-9][0-9]`.'
+        - label: 'Include target `[0-9][0-9].[0-9].[0-9][0-9]`.'
+        - label: 'Include target `[0-9][0-9].[0-9][0-9].[0-9]`.'
+        - label: 'Include target `[0-9][0-9].[0-9][0-9].[0-9][0-9]`.'
+        - label: 'Include target `[0-9].[0-9].[0-9][0-9][0-9]`.'
+        - label: 'Include target `[0-9].[0-9][0-9].[0-9][0-9][0-9]`.'
+        - label: 'Include target `[0-9][0-9].[0-9].[0-9][0-9][0-9]`.'
+        - label: 'Include target `[0-9][0-9].[0-9][0-9].[0-9][0-9][0-9]`.'
+        - label: 'Checkmark `Restrict updates`.'
+        - label: 'Checkmark `Restrict deletions`.'
+        - label: 'Checkmark `Require linear history`.'
         - label: 'Checkmark `Require signed commits`.'
         - label: 'Checkmark `Block force pushes`.'
