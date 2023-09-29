@@ -76,7 +76,7 @@ body:
         - label: 'Checkmark `Block force pushes`.'
   - type: checkboxes
     attributes:
-      label: 'Ruleset `Disabled Tag Names`'
+      label: 'Tag Ruleset `Disabled Tag Names`'
       options:
         - label: 'Exclude target `[0-9].[0-9].[0-9]`.'
         - label: 'Exclude target `[0-9].[0-9].[0-9][0-9]`.'
@@ -95,7 +95,7 @@ body:
         - label: 'Checkmark `Block force pushes`.'
   - type: checkboxes
     attributes:
-      label: 'Ruleset `Semantic Versioning Tags`'
+      label: 'Tag Ruleset `Semantic Versioning Tags`'
       options:
         - label: 'Include target `[0-9].[0-9].[0-9]`.'
         - label: 'Include target `[0-9].[0-9].[0-9][0-9]`.'
