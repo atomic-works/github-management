@@ -23,8 +23,9 @@ body:
       options:
         - label: 'I used the `github-repository-template` template repository, and copied all branches.'
         - label: 'I unchecked `General` => `Preserve this repository`.'
+        - label: 'I unchecked `General` => `Allow merge commits`.'
         - label: 'I checked `General` => `Allow squash merging` => `default to pull request title`.'
-        - label: 'I unchecked `General` => `Allow rebase merging`.'
+        - label: 'I checked `General` => `Allow rebase merging`.'
         - label: 'I checked `General` => `Always suggest updating pull request branches`.'
         - label: 'I checked `General` => `Allow auto-merge`.'
         - label: 'I checked `General` => `Automatically delete head branches`.'
@@ -72,8 +73,8 @@ body:
         - label: 'Include target `issue-[0-9][0-9][0-9]-**`.'
         - label: 'Include target `issue-[0-9][0-9][0-9][0-9]-**`.'
         - label: 'Include target `issue-[0-9][0-9][0-9][0-9][0-9]-**`.'
-        - label: 'Checkmark `Require signed commits`.'
         - label: 'Checkmark `Require linear history`.'
+        - label: 'Checkmark `Require signed commits`.'
         - label: 'Checkmark `Block force pushes`.'
   - type: checkboxes
     attributes:
@@ -91,7 +92,7 @@ body:
         - label: 'Exclude target `[0-9].[0-9][0-9].[0-9][0-9][0-9]`.'
         - label: 'Exclude target `[0-9][0-9].[0-9].[0-9][0-9][0-9]`.'
         - label: 'Exclude target `[0-9][0-9].[0-9][0-9].[0-9][0-9][0-9]`.'
-        - label: 'Include target option `All branches`.'
+        - label: 'Include target option `All tags`.'
         - label: 'Checkmark `Restrict creations`.'
         - label: 'Checkmark `Block force pushes`.'
   - type: checkboxes
