@@ -21,7 +21,7 @@ body:
     attributes:
       label: 'Steps to follow when creating a new repository before it is ready for work.'
       options:
-        - label: 'I used the `github-template` template repository, and copied all branches.'
+        - label: 'I used the `github-repository-template` template repository, and copied all branches.'
         - label: 'I unchecked `General` => `Preserve this repository`.'
         - label: 'I checked `General` => `Allow squash merging` => `default to pull request title`.'
         - label: 'I unchecked `General` => `Allow rebase merging`.'
