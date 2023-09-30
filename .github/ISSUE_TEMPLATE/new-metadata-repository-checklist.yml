@@ -1,5 +1,5 @@
-name: 'New Repository Checklist'
-description: 'List of steps to follow when creating a new repository.'
+name: 'New Metadata Repository Checklist'
+description: 'List of steps to follow when creating a new metadata repository.'
 labels: ['project-management', 'enhancement']
 body:
   - type: markdown
