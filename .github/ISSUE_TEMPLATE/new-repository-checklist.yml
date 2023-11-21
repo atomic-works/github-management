@@ -21,7 +21,7 @@ body:
     attributes:
       label: 'Steps to follow when creating a new repository before it is ready for work.'
       options:
-        - label: 'I used the `github-repository-template` template repository, and only copied the default branch.'
+        - label: 'I used the `github-repository-template` template repository, and only copied the `development` (default) branch.'
         - label: 'I created the `test` branch on the `development` branch.'
         - label: 'I created the `production` branch on the `test` branch.'
         - label: 'I unchecked `General` => `Preserve this repository`.'
