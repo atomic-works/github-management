@@ -21,7 +21,7 @@ body:
     attributes:
       label: 'Steps to follow when creating a new repository before it is ready for work.'
       options:
-        - label: 'I used the `github-repository-template` template repository, and only copied the `development` (default) branch.'
+        - label: 'I used the `github-new-repository-import` to import a base repository, and only copied the `development` (default) branch.'
         - label: 'I unchecked `General` => `Preserve this repository`.'
         - label: 'I unchecked `General` => `Allow merge commits`.'
         - label: 'I checked `General` => `Allow squash merging` => `default to pull request title`.'
